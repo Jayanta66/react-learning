@@ -123,3 +123,30 @@ class Userrr{
 
 const userrr1 = new Userrr("Manuel",35);
 console.log(userrr1); 
+
+//Arrays & Array method like map()
+
+const hobbies =["coding", "playing cricket", "sleeping", "watching movies"];
+console.log("My hobies : "+hobbies);
+
+// add new elements to array 
+hobbies.push("dsjfl");
+console.log(hobbies);
+
+// find elements
+const index = hobbies.findIndex( 
+        (item) =>{
+            return item ==="coding";
+        }
+);
+
+console.log("Index location : "+index);
+
+// map
+
+const editedhobies = hobbies.map( (item) => item + "!");
+console.log(editedhobies);
+
+
+const editedhobiess = hobbies.map( (item) => ({text:item}));
+console.log(editedhobiess);
