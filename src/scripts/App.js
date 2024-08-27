@@ -80,7 +80,7 @@ combine (50,4,2);
 
 export default (userName="ljlk", message="dsfa") =>{
     console.log("Arrow Function or Annonymous function");
-   return userName+message;
+   return this.userName+message;
 
 };
 
@@ -94,4 +94,17 @@ console.log("Name : "+user.name);
 console.log("Age : "+user.age);
 
 console.log("Name "+user.name+"  "+"Age : "+user.age);
+
+const users = {
+    name:"jj",
+    age:"33",
+    grees(){
+        console.log("dfadsfs");
+        console.log("Name : "+this.name);
+        console.log("Age : "+this.age);
+    }
+
+}
+
+users.grees();
 
