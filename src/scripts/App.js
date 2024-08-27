@@ -108,3 +108,18 @@ const users = {
 
 users.grees();
 
+//class and Constructor and method
+
+class Userrr{
+    constructor(name,age){
+        this.name=name;
+        this.age=age;
+    }
+
+    gre(){
+        console.log("HI");
+    }
+}
+
+const userrr1 = new Userrr("Manuel",35);
+console.log(userrr1); 
