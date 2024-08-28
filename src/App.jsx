@@ -93,10 +93,20 @@ function App() {
                 image={CORE_CONCEPTS[3].image}
               />
 
+
+
               <CoreConcept/>
               <CoreConcept/>
               <CoreConcept/>
               <CoreConcept/>
+
+              <CoreConceptssss {...CORE_CONCEPTS[3]} />
+              <CoreConceptssss {...CORE_CONCEPTS[2]} />
+              <CoreConceptssss {...CORE_CONCEPTS[1]} />
+              <CoreConceptssss {...CORE_CONCEPTS[0]} />
+              <CoreConceptssss {...CORE_CONCEPTS[3]} />
+              <CoreConceptssss {...CORE_CONCEPTS[3]} />
+              <CoreConceptssss {...CORE_CONCEPTS[3]} />
 
           </ul>
 
