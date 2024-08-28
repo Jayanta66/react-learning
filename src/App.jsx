@@ -1,5 +1,8 @@
 import { useState } from 'react'
 import './App.css'
+import componentsImg from './assets/assets/components.png';
+
+const reactDescriptions = ['Fundamental', 'Crucial', 'Core'];
 
 function Header(){
   return (
@@ -11,6 +14,17 @@ function Header(){
   );
 }
 
+function CoreConcept(props){
+  return (
+
+    <li>
+      <img src={props.image} alt={props.title}/>
+      <h3>{props.title}</h3>
+      <p>{props.description}</p>
+    </li>
+
+  );
+}
 
 function App() {
   const [count, setCount] = useState(0)
@@ -18,9 +32,33 @@ function App() {
   return (
     <div>
       <Header/>
-      <div>
-        <h1>React Vdsfite Learning</h1>
-      </div>
+      <main>
+
+        <section id="core-concepts">
+          <h2>Core Concepts</h2>
+          <ul>
+
+              <CoreConcept 
+                  title="Components" 
+                  description="dsfadsfdf"
+                  image={componentsImg}
+                  />
+              <CoreConcept 
+                title="dsfasfdaf"
+              
+              />
+              <CoreConcept/>
+              <CoreConcept/>
+              <CoreConcept/>
+              <CoreConcept/>
+              <CoreConcept/>
+
+          </ul>
+
+
+        </section>
+
+      </main>
 
     </div>
   )
