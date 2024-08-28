@@ -150,3 +150,75 @@ console.log(editedhobies);
 
 const editedhobiess = hobbies.map( (item) => ({text:item}));
 console.log(editedhobiess);
+
+
+function transformToObjects(numberArray) {
+    //  Todo: Add your logic
+    numberArray=["1","2","3","4"];
+    
+  const  newww = numberArray.map( (item) => ({text:item}));
+  console.log(newww);
+    
+ }
+
+transformToObjects();
+
+//Destructuring
+
+const [firstName, lastName] = ["Max","dsfdsfds"];
+console.log(firstName);
+console.log(lastName);
+ 
+// Spread Operator
+//...
+
+//Controll Structures 
+
+/*
+const password = prompt('Your password');
+
+if(password === "Hellow"){
+    console.log("Hellow works");
+
+}else if(password === "hello"){
+    console.log("hello works");
+}
+else{
+    console.log("Access not granted");
+}
+*/
+
+const ho = ["dsfa","dsfadsfdsf"];
+for(const hof of ho){
+    console.log(ho);
+}
+
+// Using Function as Value
+
+function handleTimeout(){
+    console.log("Time out !!");
+}
+
+const handleTimeout2 = () => {
+    console.log("Time out .... again !!!!");
+};
+
+setTimeout(handleTimeout);
+
+setTimeout(handleTimeout,2000);
+setTimeout(handleTimeout2,3000);
+setTimeout(
+    () => {
+
+        console.log("More timing out .....");
+
+    }
+
+);
+
+function greeter(greeFn){
+    greeFn();
+}
+
+greeFn(() => console.log("Hi"));
+
