@@ -10,7 +10,19 @@ import {EXAMPLES} from './data.js'
 function App() {
   const [selectedTopic, setSelectedTopic] = useState();
 
-  let tabContent = 'Please click a button';
+  let tabContent = 'Please select a topic';
+
+  if(selectedTopic){
+    tabContent = <div id="tab-content">
+    <h3>{EXAMPLES[selectedTopic].title}</h3> 
+    <p>{EXAMPLES[selectedTopic].description}</p>
+    <pre>
+        <code>
+        {EXAMPLES[selectedTopic].code}
+        </code>  
+    </pre> 
+  </div> 
+  }
 
   function haldleSelect(selectedButton){
     //selectedButton => 'components', 'jsx', 'props', 'state'
@@ -48,21 +60,7 @@ function App() {
 
         
           </menu>
-          {!selectedTopic && <p>Please select a topic.</p>}
-          {selectedTopic &&(
-
-              <div id="tab-content">
-
-
-                <h3>{EXAMPLES[selectedTopic].title}</h3> 
-                <p>{EXAMPLES[selectedTopic].description}</p>
-                <pre>
-                    <code>
-                    {EXAMPLES[selectedTopic].code}
-                    </code>  
-                </pre> 
-              </div>    
-          )}
+          {tabContent}
               
         </section>
       </main>
